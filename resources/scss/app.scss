@@ -22,6 +22,7 @@ header{
     ul{
         list-style: none;
         margin-top: 2rem;
+        margin-bottom: -1px;
     }
     
     li{
@@ -34,6 +35,10 @@ header{
         color: rgba(2,130,249,255);
         border-bottom: 3px solid rgba(2,130,249,255);
         padding-bottom: 2em;
+    }
+
+    img{
+        width: 80%;
     }
 
 }
