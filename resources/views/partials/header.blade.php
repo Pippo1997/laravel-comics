@@ -10,7 +10,7 @@
             <ul class="d-flex">
                 @foreach($menu as $menuItem)
                 <li class="active">
-                    <a href="{{$menuItem['url']}}">{{$menuItem['label']}}</a>
+                    <a href="{{ $menuItem['url'] }}">{{ $menuItem['label'] }}</a>
                 </li>
                 @endforeach
             </ul>

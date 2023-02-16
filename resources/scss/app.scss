@@ -35,3 +35,58 @@ header{
     }
 
 }
+
+main{
+
+    .img-comcic{
+        background-image: url('../images/jumbotron.jpg');
+        background-size: cover;
+        height: 350px;
+    }
+
+    .upper-title {
+
+        position: relative;
+    
+        .title{
+          background-color: rgba(2,130,249,255);
+          width: 250px;
+          padding: 15px;
+          text-align: center;
+          color: white;
+          position: absolute;
+          top: -25px;
+          left: 100px;
+          font-weight: bold;
+        }
+    }
+    
+    .black {
+        background-color: rgba(28,28,28,255);
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .fumetto{
+        width: calc(15%);
+        text-align: center;
+        margin: 5px;
+        padding: 1rem;
+        color: white;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .button_load {
+        margin-bottom: 3em;
+        color: white;
+        padding: 1em 2em;
+        background-color: rgba(2,130,249,255);
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+}
