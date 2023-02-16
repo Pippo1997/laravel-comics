@@ -243,6 +243,11 @@ return [
             'active' => false
         ],
         [
+            'label' => 'COLLECTIBLES',
+            'url' => '#',
+            'active' => false
+        ],
+        [
             'label' => 'VIDEO',
             'url' => '#',
             'active' => false

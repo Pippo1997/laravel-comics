@@ -1,4 +1,7 @@
 <header>
+    <div class="blue-section">
+
+    </div>
     <div class="container d-flex justify-content-between align-items-center text-center">
         <a href="/" class="logo">
             <img src="{{Vite::asset('resources/images/dc-logo.png')}}" alt="logo">

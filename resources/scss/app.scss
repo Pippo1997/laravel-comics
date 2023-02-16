@@ -6,23 +6,32 @@
     box-sizing: border-box;
 }
 
-a{
-    text-decoration: none;
-}
+header{
 
-ul{
-    list-style: none;
-    margin-top: 2rem;
-}
+    .blue-section{
+        height: 20px;
+        background-color: rgba(2,130,249,255);
+    }
 
-li{
-    height: 100%;
-    padding: 1rem;
-    font-size: 16px;
-}
+    a{
+        text-decoration: none;
+    }
+    
+    ul{
+        list-style: none;
+        margin-top: 2rem;
+    }
+    
+    li{
+        height: 100%;
+        padding: 1rem;
+        font-size: 16px;
+    }
+    
+    .active {
+        color: rgba(2,130,249,255);
+        border-bottom: 3px solid rgba(2,130,249,255);
+        padding-bottom: 2em;
+    }
 
-.active {
-    color: rgba(2,130,249,255);
-    border-bottom: 3px solid rgba(2,130,249,255);
-    padding-bottom: 2em;
 }
