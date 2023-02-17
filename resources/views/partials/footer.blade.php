@@ -76,7 +76,7 @@
                 <ul>
                     @foreach($social as $socialItem)
                     <li class="active">
-                        <a href="#"><img src="images/{{ $socialItem['logo'] }}" alt="social"></a>
+                        <a href="#"><img src="/images/{{ $socialItem['logo'] }}" alt="social"></a>
                     </li>
                     @endforeach
                 </ul>
