@@ -1,12 +1,12 @@
 <footer>
 
     <!-- sezione blu -->
-    <div class="blue-section">
-        <div class="container cont-icon d-flex justify-content-between">
+    <div class="blue-section p-2">
+        <div class="container cont-icon d-flex justify-content-between aling-items-center">
             <div class="icon">
                 @foreach ($icone as $iconeItem)
                 <img src="images/{{ $iconeItem['image'] }}" alt="{{ $iconeItem['label'] }}">
-                <span class="label">{{ $iconeItem['label'] }}</span>
+                <span class="label me-2">{{ $iconeItem['label'] }}</span>
                 @endforeach
             </div>
         </div>

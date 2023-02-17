@@ -26,7 +26,7 @@ Route::get('/', function () {
 })->name('Home');
 
 
-Route::get('/Home/{title}', function ($title) {
+Route::get('/home/{id}', function ($id) {
 
     // recupero array fumetti
     $fumetti = config('comics.fumetti');
@@ -37,13 +37,13 @@ Route::get('/Home/{title}', function ($title) {
 
     // prendo un elementi singolo dell'array fumetti
     $single = '';
-    foreach($fumetti as $fumettiItem){
-        if($fumettiItem['title'] == $title){
+    foreach($fumetti as $key => $fumettiItem){
+        if($id == $key){
             $single = $fumettiItem;
         }
     }
     
 return view('card', compact('single','icone','social'));
-})->name('card-fumetto');
+})->name('card');
 
 

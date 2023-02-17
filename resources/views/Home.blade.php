@@ -17,14 +17,14 @@
     <div class="container">
       <div class="row">
         
-          @foreach ($fumetti as $fumettiItem)
+          @foreach ($fumetti as $key => $fumettiItem)
           <div class="fumetto">
-            <a href="{{ route('card-fumetto', ['title' => $fumettiItem['title']]) }}">
             {{-- link per accedere alla pagina card --}}
-            <div class="fumetto-img">
-              <img src="{{ $fumettiItem['thumb'] }}" alt="{{ $fumettiItem['title'] }}"> 
-            </div>
-            <h5>{{ $fumettiItem['title'] }}</h5>  
+            <a href="{{ route('card', ['id' => $key]) }}">
+              <div class="fumetto-img">
+                <img src="{{ $fumettiItem['thumb'] }}" alt="{{ $fumettiItem['title'] }}"> 
+              </div>
+              <h5>{{ $fumettiItem['title'] }}</h5>  
             </a>
             </div>
           @endforeach
