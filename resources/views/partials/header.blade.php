@@ -8,11 +8,36 @@
         </a>
         <nav>
             <ul class="d-flex">
-                @foreach($menu as $menuItem)
-                <li class="active">
-                    <a href="{{ $menuItem['url'] }}">{{ $menuItem['label'] }}</a>
+                <li class="active {{ Route::currentRouteName() == 'characters' ? 'active' : ''}}">
+                    <a href="{{ route('Home')}}">Characters</a>
                 </li>
-                @endforeach
+                <li class="active {{ Route::currentRouteName() == 'Comics' ? 'active' : ''}}">
+                    <a href="{{ route('Home')}}">Comics</a>
+                </li>
+                <li class="active {{ Route::currentRouteName() == 'Movie' ? 'active' : ''}}">
+                    <a href="{{ route('Home')}}">Movie</a>
+                </li>
+                <li class="active {{ Route::currentRouteName() == 'TV' ? 'active' : ''}}">
+                    <a href="{{ route('Home')}}">TV</a>
+                </li>
+                <li class="active {{ Route::currentRouteName() == 'Games' ? 'active' : ''}}">
+                    <a href="{{ route('Home')}}">Games</a>
+                </li>
+                <li class="active {{ Route::currentRouteName() == 'Collectibles' ? 'active' : ''}}">
+                    <a href="{{ route('Home')}}">Collectibles</a>
+                </li>
+                <li class="active {{ Route::currentRouteName() == 'Video' ? 'active' : ''}}">
+                    <a href="{{ route('Home')}}">Video</a>
+                </li>
+                <li class="active {{ Route::currentRouteName() == 'Fans' ? 'active' : ''}}">
+                    <a href="{{ route('Home')}}">Fans</a>
+                </li>
+                <li class="active {{ Route::currentRouteName() == 'News' ? 'active' : ''}}">
+                    <a href="{{ route('Home')}}">News</a>
+                </li>
+                <li class="active {{ Route::currentRouteName() == 'Shop' ? 'active' : ''}}">
+                    <a href="{{ route('Home')}}">Shop</a>
+                </li>
             </ul>
         </nav>
         <div class="search">
@@ -20,3 +45,4 @@
         </div>
     </div>
 </header>
+

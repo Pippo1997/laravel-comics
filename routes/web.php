@@ -15,8 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-        // recupero array menu
-        $menu = config('comics.menu');
         // recupero array fumetti
         $fumetti = config('comics.fumetti');
         // recupero array icone
@@ -24,6 +22,24 @@ Route::get('/', function () {
         // recupero array social
         $social = config('comics.social');
         
-    return view('Home', compact('menu','fumetti','icone','social'));
-});
+    return view('Home', compact('fumetti','icone','social'));
+})->name('Home');
+
+
+Route::get('/main/{title}', function ($title) {
+
+    // recupero array fumetti
+    $fumetti = config('comics.fumetti');
+
+    // prendo un elementi singolo dell'array fumetti
+    $single = '';
+    foreach($fumetti as $fumettiItem){
+        if($fumettiItem['title'] == $title){
+            $single = $fumettiItem;
+        }
+    }
+    
+return view('Home', compact('single'));
+})->name('card-fumetto');
+
 
