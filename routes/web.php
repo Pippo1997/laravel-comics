@@ -26,7 +26,7 @@ Route::get('/', function () {
 })->name('Home');
 
 
-Route::get('/main/{title}', function ($title) {
+Route::get('/Home/{title}', function ($title) {
 
     // recupero array fumetti
     $fumetti = config('comics.fumetti');
