@@ -35,8 +35,8 @@ Route::get('/home/{id}', function ($id) {
     // recupero array social
     $social = config('comics.social');
 
-    // prendo un elementi singolo dell'array fumetti
-    $single = '';
+    // prendo un elemento singolo dell'array fumetti
+    $single = $fumetti[$id];
     foreach($fumetti as $key => $fumettiItem){
         if($id == $key){
             $single = $fumettiItem;
