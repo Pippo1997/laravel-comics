@@ -5,7 +5,7 @@
         <div class="container cont-icon d-flex justify-content-between">
             <div class="icon">
                 @foreach ($icone as $iconeItem)
-                <img src="{{ $iconeItem['image'] }}" alt="{{ $iconeItem['label'] }}">
+                <img src="images/{{ $iconeItem['image'] }}" alt="{{ $iconeItem['label'] }}">
                 <span class="label">{{ $iconeItem['label'] }}</span>
                 @endforeach
             </div>
@@ -60,7 +60,7 @@
             </div>
 
             <div class="">
-                <img src="{{ Vite::asset('resources/images/dc-logo-bg.png') }}" alt="dc-logo">
+                <img src="{{ Vite::asset('public/images/dc-logo-bg.png') }}" alt="dc-logo">
             </div>
         </div>
     </div>
@@ -76,7 +76,7 @@
                 <ul>
                     @foreach($social as $socialItem)
                     <li class="active">
-                        <a href="#"><img src="{{ $socialItem['logo'] }}" alt="social"></a>
+                        <a href="#"><img src="images/{{ $socialItem['logo'] }}" alt="social"></a>
                     </li>
                     @endforeach
                 </ul>

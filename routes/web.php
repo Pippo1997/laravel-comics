@@ -30,6 +30,10 @@ Route::get('/Home/{title}', function ($title) {
 
     // recupero array fumetti
     $fumetti = config('comics.fumetti');
+    // recupero array icone
+    $icone = config('comics.icone');
+    // recupero array social
+    $social = config('comics.social');
 
     // prendo un elementi singolo dell'array fumetti
     $single = '';
@@ -39,7 +43,7 @@ Route::get('/Home/{title}', function ($title) {
         }
     }
     
-return view('Home', compact('single'));
+return view('card', compact('single','icone','social'));
 })->name('card-fumetto');
 
 

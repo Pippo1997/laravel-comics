@@ -1,18 +1,39 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layout')
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>laravel-comics</title>
-    @vite('resources/js/app.js')
-</head>
+@section('content')
+<main>
+  {{-- Jumbotron --}}
+  <div class="img-comcic"></div>
 
-<body>
-    @include('partials.header')
-    @include('partials.main')
-    @yield('content')
-    @include('partials.footer')
-</body>
+  {{-- Bottone current --}}
+  <div class="upper-title">
+    <div class="title">
+      CURRENT SERIES
+    </div>
+  </div>
 
-</html>
+  {{-- Sezione fumetti --}}
+  <div class="black">
+    <div class="container">
+      <div class="row">
+        
+          @foreach ($fumetti as $fumettiItem)
+          <div class="fumetto">
+            <a href="{{ route('card-fumetto', ['title' => $fumettiItem['title']]) }}">
+            {{-- link per accedere alla pagina card --}}
+            <div class="fumetto-img">
+              <img src="{{ $fumettiItem['thumb'] }}" alt="{{ $fumettiItem['title'] }}"> 
+            </div>
+            <h5>{{ $fumettiItem['title'] }}</h5>  
+            </a>
+            </div>
+          @endforeach
+          
+      </div>
+      <div>
+        <button class="button_load">LOAD MORE</button>
+      </div>
+    </div>
+  </div>
+</main>
+@endsection
