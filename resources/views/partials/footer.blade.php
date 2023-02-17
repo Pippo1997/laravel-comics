@@ -5,7 +5,7 @@
         <div class="container cont-icon d-flex justify-content-between aling-items-center">
             <div class="icon">
                 @foreach ($icone as $iconeItem)
-                <img src="images/{{ $iconeItem['image'] }}" alt="{{ $iconeItem['label'] }}">
+                <img src="/images/{{ $iconeItem['image'] }}" alt="{{ $iconeItem['label'] }}">
                 <span class="label me-2">{{ $iconeItem['label'] }}</span>
                 @endforeach
             </div>

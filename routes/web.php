@@ -37,11 +37,6 @@ Route::get('/home/{id}', function ($id) {
 
     // prendo un elemento singolo dell'array fumetti
     $single = $fumetti[$id];
-    foreach($fumetti as $key => $fumettiItem){
-        if($id == $key){
-            $single = $fumettiItem;
-        }
-    }
     
 return view('card', compact('single','icone','social'));
 })->name('card');
