@@ -44,5 +44,7 @@
             <input type="text" placeholder="Search">
         </div>
     </div>
+    {{-- Jumbotron --}}
+    <div class="img-comcic"></div>
 </header>
 

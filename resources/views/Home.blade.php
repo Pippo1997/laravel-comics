@@ -2,8 +2,6 @@
 
 @section('content')
 <main>
-  {{-- Jumbotron --}}
-  <div class="img-comcic"></div>
 
   {{-- Bottone current --}}
   <div class="upper-title">
